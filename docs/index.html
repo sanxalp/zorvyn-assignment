@@ -26,10 +26,10 @@
     <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js"></script>
     <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-standalone-preset.js"></script>
     <script>
-      // When hosted on GitHub Pages, this loads the OpenAPI spec from the repo root.
-      // If you later move the spec, update this path accordingly.
+      // GitHub Pages serves `docs/` as the site root, so relative paths can be tricky.
+      // Loading from raw.githubusercontent.com is the most reliable approach.
       window.ui = SwaggerUIBundle({
-        url: "../openapi.yaml",
+        url: "https://raw.githubusercontent.com/sanxalp/zorvyn-assignment/main/openapi.yaml",
         dom_id: "#swagger-ui",
         deepLinking: true,
         presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],

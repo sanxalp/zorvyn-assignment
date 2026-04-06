@@ -41,3 +41,5 @@ Thumbs.db
 *.swp
 .idea/
 .vscode/
+
+API_DOCUMENTATION.md

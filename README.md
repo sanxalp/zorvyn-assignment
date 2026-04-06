@@ -49,7 +49,25 @@ npm run dev
 Server runs on `http://localhost:3000`.
 
 ## API Documentation (Swagger UI)
-After starting the server, open Swagger UI at `http://localhost:3000/api/docs`.
+There are two ways to view the API documentation:
+
+- **Local Swagger UI (recommended for testing)**: after starting the server, open `http://localhost:3000/api/docs`.
+- **Hosted Swagger UI (recommended for submission)**: this repo includes a GitHub Pages Swagger UI in `docs/` that loads `openapi.yaml`.
+
+### Host the docs on GitHub Pages (submission link)
+In your GitHub repo:
+- Go to **Settings → Pages**
+- **Source**: Deploy from a branch
+- **Branch**: `main`
+- **Folder**: `/docs`
+
+After GitHub publishes the site, your documentation URL will be:
+- `https://<github-username>.github.io/<repo-name>/`
+
+For this repository, it will be:
+- `https://sanxalp.github.io/zorvyn-assignment/`
+
+For a short write-up explaining how the docs work and how to authorize requests, see `API_DOCUMENTATION.md`.
 
 ## API Overview & Testing Guide
 
@@ -81,6 +99,10 @@ Attach the token in the `Authorization` header.
 GET http://localhost:3000/api/dashboard/summary
 Authorization: Bearer <YOUR_TOKEN>
 ```
+
+### Using Swagger UI Authorization
+In Swagger UI, click **Authorize** and paste:
+`Bearer <YOUR_TOKEN>`
 
 ### Step 3: Fetch Records (Analyst & Admin)
 Supports query parameters: `startDate`, `endDate`, `type`, `category`, `page`, `limit`.

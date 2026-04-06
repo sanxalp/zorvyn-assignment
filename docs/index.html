@@ -26,14 +26,9 @@
     <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js"></script>
     <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-standalone-preset.js"></script>
     <script>
-      // On GitHub Pages, the site is hosted at `/<repo>/`.
-      // This computes the repo name from the current URL and loads the spec from:
-      // `https://<user>.github.io/<repo>/openapi.yaml`
-      const repo = window.location.pathname.split("/").filter(Boolean)[0];
-      const specUrl = `/${repo}/openapi.yaml`;
-
       window.ui = SwaggerUIBundle({
-        url: specUrl,
+        // Self-contained for GitHub Pages: `docs/` is the site root.
+        url: "./openapi.yaml",
         dom_id: "#swagger-ui",
         deepLinking: true,
         presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],

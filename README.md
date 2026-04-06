@@ -52,9 +52,9 @@ Server runs on `http://localhost:3000`.
 There are two ways to view the API documentation:
 
 - **Local Swagger UI (recommended for testing)**: after starting the server, open `http://localhost:3000/api/docs`.
-- **Hosted Swagger UI (recommended for submission)**: this repo includes a GitHub Pages Swagger UI in `docs/` that loads `openapi.yaml`.
+- **Hosted Swagger UI (recommended)**: this repo includes a GitHub Pages Swagger UI in `docs/` that loads `openapi.yaml`.
 
-### Host the docs on GitHub Pages (submission link)
+### Host the docs on GitHub Pages 
 In your GitHub repo:
 - Go to **Settings → Pages**
 - **Source**: Deploy from a branch
@@ -67,7 +67,6 @@ After GitHub publishes the site, your documentation URL will be:
 For this repository, it will be:
 - `https://sanxalp.github.io/zorvyn-assignment/`
 
-For a short write-up explaining how the docs work and how to authorize requests, see `API_DOCUMENTATION.md`.
 
 ## API Overview & Testing Guide
 
